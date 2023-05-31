@@ -1,0 +1,70 @@
+Links clases laboratorio:
+(Recordar estar con el correo institucional)
+
+- Clase 1: https://www.youtube.com/watch?v=XQUzksgqcuA&t=1s&ab_channel=JonathanGaticaLuengo
+
+- Getter Setter: https://www.youtube.com/watch?v=NQqv-Nk4Yrg&ab_channel=JonathanGaticaLuengo
+
+- Implementación clase trabajador: https://www.youtube.com/watch?v=Vzne1qEbp4w
+
+- Guía asociación entre clases 1: https://www.youtube.com/watch?v=YHb4hy78dWg
+
+- Guía asociación entre clases 2: https://www.youtube.com/watch?v=YQQyIXTTpNc
+
+- Herencia: https://www.youtube.com/watch?v=fUdvo4myppY
+
+- Métodos de la clase String: https://www.youtube.com/watch?v=uFDpQXgfXHo
+
+- Ejemplo Sobreescritura y Sobrecarga: https://www.youtube.com/watch?v=btqVZv_zdOY
+
+- Ejemplo Interfaz 1: https://www.youtube.com/watch?v=3G4X96PQ6_E
+
+- Ejemplo Interfaz 2: https://www.youtube.com/watch?v=vs6QsnzrVmQ
+
+- Ejemplo JFrame: https://www.youtube.com/watch?v=bZY6_gw5_MY
+
+- Ejemplo JTable 1: https://www.youtube.com/watch?v=oYUR9Bcmcp8
+
+- Ejemplo JTable 2: https://www.youtube.com/watch?v=prB_aR7wwus
+
+- Ejemplo Barra de búsqueda y JComboBox: https://www.youtube.com/watch?v=e6pQ46qpt_M
+
+- Ejemplo JRadioButton y JCheckBox: https://www.youtube.com/watch?v=0QSLtdGS-Yk
+
+- Ejemplo JMenuBar y manejo de vistas 1: https://www.youtube.com/watch?v=FhE_9u-EdFo
+
+- Ejemplo JMenuBar y manejo de vistas 2: https://www.youtube.com/watch?v=scAydD-_IsE
+
+- Selección datos filas: 
+
+                   int[] selectedRow = tabla.getSelectedRows();
+
+
+
+                    for (int i = 0; i < selectedRow.length; i++) {
+
+                        codigo = (String) tabla.getValueAt(selectedRow[i], 0); // para obtener valores getValueAt(fila , columna)
+
+                        nombre = codigo.substring(0, codigo.indexOf(" T."));
+
+                        total_ep = (String) tbTemGestion.getValueAt(selectedRow[i], 1);
+
+                        vistos = (String) tbTemGestion.getValueAt(selectedRow[i], 2);
+
+                    }
+
+
+
+                    Vista frame = Vista.getInstancia();
+
+                    frame.setCodigo(codigo);
+
+                    frame.setLbNombre(nombre);
+
+                    frame.setTxtTotalEpisodios(total_ep);
+
+                    frame.setTxtEpisodiosVistos(vistos);
+
+                    frame.setVisible(true);
+
+                    dispose();
